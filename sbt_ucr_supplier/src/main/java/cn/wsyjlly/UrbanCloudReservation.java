@@ -10,6 +10,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class UrbanCloudReservation {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(UrbanCloudReservation.class, args);
 	}
 }
