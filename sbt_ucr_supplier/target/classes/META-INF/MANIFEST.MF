@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: ASUS
+Build-Jdk: 10.0.1
+Implementation-Title: sbt_urban_cloud_reservation
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: cn.wsyjlly
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/sbt_urban_cloud_reservation
+Created-By: Maven Integration for Eclipse
+
