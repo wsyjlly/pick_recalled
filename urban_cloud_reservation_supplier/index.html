@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>郑州龙缘网络科技有限公司</title>
+	<link href="style/images/lylogo.ico" rel="shortcut icon"/>
+	<script type="text/javascript" src="style/js/jquery-3.2.1.js"></script>
+</head>
+<body>
+	
+	<div class="a">
+		<!-- <div class="b">
+			<p class="c"></p>
+		</div> -->
+	</div>
+	
+</body>
+<script>
+        	// window.onload=function () {
+        	// 	var obj=[[1231,3423,234234],[1231,3423,234234],[1231,3423,234234]];
+	        // 	// alert(obj[0]);
+	        // 	$(".a").html("<div class='b'></div>");
+	        // 	for (var i = obj[0].length - 1; i >= 0; i--) {
+	        // 		$(".b").prepend("<p class='c'>"+obj[0][i]+"</p>");
+	        // 		// alert(obj[0][i]);
+	        // 	}
+        	// }
+
+        	$(".issue").each(function(index,e){
+        		var questId = $(e).attr("data-ques-id");
+        		var urlHead = "http://dj.wanfangdata.com.cn/Answer/GetCorrectAnswers";
+        		var data = {
+        			questionId: questId
+        		}
+        		$.post(urlHead,data,function(res){
+        			console.log(index+1)
+        			console.log(res.data);
+        			console.log("=====================");
+
+        			var d=res;
+        			var t = $($(".issue-options").get(index));
+        			var p = t.children("p");
+        			var list=  p.children("span");
+        			list.each(function(ind,da){
+        				var strKey = $(da).html();
+        				var show = false;
+        				var li = d.data;
+        				for(var i= 0;i<li.length;i++){
+        					if(li[i].Name==strKey){
+        						show = true;
+        						break;
+        					}
+        				}
+        				if(show){
+                 		// $(da).css("background-color","#ff6700");
+                 		$(da).click();
+                 	}
+                 })
+        		})            
+        	})
+
+        	
+        	$(".issue").each(function(index,e){
+        		var questId = $(e).attr("data-ques-id");
+        		var urlHead = "http://dj.wanfangdata.com.cn/Answer/GetCorrectAnswers";
+        		var data = {
+        			questionId: questId
+        		}
+        		$.post(urlHead,data,function(res){
+        			console.log(index+1)
+        			console.log(res.data);
+        			console.log("=====================");
+
+        			var d=res;
+        			var t = $($(".issue-options").get(index));
+        			var p = t.children("p");
+        			var list=  p.children("span");
+        			list.each(function(ind,da){
+        				var strKey = $(da).html();
+        				var show = false;
+        				var li = d.data;
+        				for(var i= 0;i<li.length;i++){
+        					if(li[i].Name==strKey){
+        						show = true;
+        						break;
+        					}
+        				}
+        				if(show){
+                 		// $(da).css("background-color","#ff6700");
+                 		$(da).click();
+                 	}
+                 })
+        		})            
+        	})
+
+        </script>\
+        <script type="text/javascript">
+        	window.onload=function() {
+        		document.getElementById("main a").onclick() = function() {
+        			//1.创建XMLHttpRequest
+        			var request = new XMLHttpRequest();
+        			//2.准备发送数据
+        			var url = this.href;
+        			var method = "GET";
+        			//3.调用XMLHttpRequest对象的open方法
+        			request.open(method,url);
+        			//4.调用XMLHttpRequest对象的send方法
+        			request.send(null);
+        			//5.为XMLHttpRequest对象添加onreadystatechange响应函数
+        			request.onreadystatechange() = function () {
+        				//6.判断响应是否完成：XMLHttpRequest对象的nreadyState属性值为4的时候
+        				if (request.redayState == 4) {
+        					//7.判断响应是否可用：XMLHttpRequest对象的status属性值为200
+        					if (request.status == 200 || request.status == 304) {
+        						//8.获取响应结果responseText
+        						alert(request.responseText);
+
+        					}
+        				}
+        			}
+        			//9.取消a节点默认行为
+        			return false;
+         		}
+        	}
+
+        </script>
+        </html>
