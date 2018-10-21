@@ -149,7 +149,7 @@
 				<version>1.0.0</version>
 				<configuration>
 					<!--注意 修改成远程服务器地址-->
-				   <dockerHost>http://47.94.160.5:2375</dockerHost>
+				   <dockerHost>http://192.168.114.135:2375</dockerHost>
 				   <imageName>sbt_urban_cloud_reservation</imageName>
 				   <!-- <baseImage>java</baseImage>
 				   <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint> -->
